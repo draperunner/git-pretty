@@ -99,3 +99,6 @@ ENV/
 
 # mkdocs documentation
 /site
+
+# shell scripts
+*.sh
