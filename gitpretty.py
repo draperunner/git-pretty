@@ -65,7 +65,7 @@ def main():
             print("How long ago?")
             print()
             print("1: Last commit")
-            print("2: it seems like forever ago")
+            print("2: It seems like forever ago")
             response = input("> ")
             print()
 
