@@ -1,6 +1,19 @@
 #!/usr/bin/python
 from __future__ import print_function
+
 from builtins import input
+
+
+def interactive_rebase():
+    print("We're going to do an interactive rebase!")
+    print("Welcome to the DANGER ZONE!")
+    print()
+    print("git rebase -i {COMMITISH}")
+    print()
+    print("And when that's done, do this:")
+    print()
+    print("git push --force origin {branch}")
+    print()
 
 
 def main():
@@ -24,14 +37,14 @@ def main():
             print("Looks like we caught this just in time.")
             print("Split off a logical chunk from your mess, stage it and commit it with a good message.")
             print("Still have a mess? Do it again.")
-            return
+            return "11"
 
         if response == "2":
             print("Looks like this is what you are looking for:")
             print()
             print("git reset --hard")
             print()
-            return
+            return "12"
 
     if response == "2":
         print("Has anyone else seen it?")
@@ -46,7 +59,7 @@ def main():
             print()
             print("git revert {COMMITISH}")
             print()
-            return
+            return "21"
 
         if response == "2":
             print("How long ago?")
@@ -71,21 +84,21 @@ def main():
                     print("git add {my_awesome_file}")
                     print("git commit --amend")
                     print()
-                    return
+                    return "2211"
 
                 if response == "2":
                     print("Looks like this is what you are looking for:")
                     print()
                     print("git commit --amend")
                     print()
-                    return
+                    return "2212"
 
                 if response == "3":
                     print("Looks like this is what you are looking for:")
                     print()
                     print("git reset --hard HEAD^")
                     print()
-                    return
+                    return "2213"
 
             if response == "2":
                 print("Take a mulligan?")
@@ -102,19 +115,11 @@ def main():
                     print()
                     print("Then split off a logical chunk from your mess, stage it and commit it with a good message.")
                     print("Still have a mess? Do it again.")
-                    return
+                    return "2221"
 
                 if response == "2":
-                    print("We're going to do an interactive rebase!")
-                    print("Welcome to the DANGER ZONE!")
-                    print()
-                    print("git rebase -i {COMMITISH}")
-                    print()
-                    print("And when that's done, do this:")
-                    print()
-                    print("git push --force origin {branch}")
-                    print()
-                    return
+                    interactive_rebase()
+                    return "2222"
 
     if response == "3":
         print("Is it already on GitHub?")
@@ -142,7 +147,7 @@ def main():
 
                 if response == "1":
                     print("It's safest to let it stay ugly then")
-                    return
+                    return "3111"
 
                 if response == "2":
                     print("Do you hate them?")
@@ -153,30 +158,18 @@ def main():
                     print()
 
                     if response == "1":
-                        print("We're going to do an interactive rebase!")
-                        print("Welcome to the DANGER ZONE!")
-                        print()
-                        print("git rebase -i {COMMITISH}")
-                        print()
-                        print("And when that's done, do this:")
-                        print()
-                        print("git push --force origin {branch}")
-                        print()
-                        return
+                        interactive_rebase()
+                        return "31121"
 
                     if response == "2":
                         print("Send them a note, let 'em know you're changing history.")
                         print()
-                        print("We're going to do an interactive rebase!")
-                        print("Welcome to the DANGER ZONE!")
-                        print()
-                        print("git rebase -i {COMMITISH}")
-                        print()
-                        print("And when that's done, do this:")
-                        print()
-                        print("git push --force origin {branch}")
-                        print()
-                        return
+                        interactive_rebase()
+                        return "31122"
+
+            if response == "2":
+                interactive_rebase()
+                return "312"
 
         if response == "2":
             print("Should we remove merge conflicts?")
@@ -191,19 +184,12 @@ def main():
                 print()
                 print("git rebase origin/{branch}")
                 print()
-                return
+                return "321"
 
             if response == "2":
-                print("We're going to do an interactive rebase!")
-                print("Welcome to the DANGER ZONE!")
-                print()
-                print("git rebase -i {COMMITISH}")
-                print()
-                print("And when that's done, do this:")
-                print()
-                print("git push --force origin {branch}")
-                print()
-                return
+                interactive_rebase()
+                return "322"
+
 
 if __name__ == '__main__':
     main()
