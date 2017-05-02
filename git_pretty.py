@@ -191,5 +191,9 @@ def main():
                 return "322"
 
 
+def console_script_wrapper():
+    main()
+
+
 if __name__ == '__main__':
     main()

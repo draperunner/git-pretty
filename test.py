@@ -1,12 +1,12 @@
 import unittest
 
-import gitpretty
+import git_pretty
 
 
 def test_path(path):
     values = iter(path)
-    gitpretty.input = lambda p: next(values)
-    return gitpretty.main()
+    git_pretty.input = lambda p: next(values)
+    return git_pretty.main()
 
 
 class TestGitPretty(unittest.TestCase):
