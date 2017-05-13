@@ -1,6 +1,6 @@
 import unittest
 
-import git_pretty
+from git_pretty import git_pretty
 
 
 def test_path(path):

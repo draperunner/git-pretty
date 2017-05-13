@@ -1,1 +1,0 @@
-from git_pretty import console_script_wrapper
