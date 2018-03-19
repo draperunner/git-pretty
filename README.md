@@ -5,8 +5,10 @@ An implementation of Justin Hileman's handy chart from http://justinhileman.info
 
 ## Install
 ```bash
-pip install git-pretty
+sudo pip install git-pretty
 ```
+
+sudo makes the installation global, so that you can run `git-pretty` from any directory!
 
 ## Use
 Just run
@@ -20,5 +22,5 @@ So you have a mess on your hands. What sort of mess?
 1: An uncommitted mess
 2: I accidentally committed something
 3: My Git history is ugly
-> 
+>
 ```
