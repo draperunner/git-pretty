@@ -1,6 +1,6 @@
 {
   "name": "git-pretty",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An implementation of Justin Hileman's chart from \"Changing History, or How to Git Pretty\"",
   "main": "git-pretty/git-pretty.js",
   "scripts": {
