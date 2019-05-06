@@ -1,0 +1,24 @@
+{
+  "name": "git-pretty",
+  "version": "0.1.2",
+  "description": "An implementation of Justin Hileman's chart from \"Changing History, or How to Git Pretty\"",
+  "main": "git-pretty/git-pretty.js",
+  "scripts": {
+    "start": "node git-pretty.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "./git-pretty.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/draperunner/git-pretty.git"
+  },
+  "author": "Mats Byrkjeland <matsbyr@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/draperunner/git-pretty/issues"
+  },
+  "homepage": "https://github.com/draperunner/git-pretty#readme",
+  "dependencies": {
+    "prompt-sync": "^4.1.6"
+  }
+}
