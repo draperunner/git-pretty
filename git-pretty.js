@@ -19,6 +19,7 @@ function main() {
     console.log("1: An uncommitted mess")
     console.log("2: I accidentally committed something")
     console.log("3: My Git history is ugly")
+    console.log("4: I have a bunch of old branches I want gone")
     let response = prompt("> ")
     console.log()
 
@@ -210,6 +211,16 @@ function main() {
                 return "322"
             }
         }
+    }
+
+    if (response == "4") {
+        console.log("To delete all local branches that are already merged into the currently checked out branch:")
+        console.log()
+        console.log('git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d')
+        console.log()
+        console.log("You can see that master and dev are excluded in case they are an ancestor.")
+        console.log("Check out https://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged")
+        return "4"
     }
 }
 
