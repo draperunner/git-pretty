@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/draperunner/git-pretty#readme",
   "dependencies": {
-    "prompt-sync": "^4.1.6"
+    "inquirer": "^6.3.1"
   }
 }
