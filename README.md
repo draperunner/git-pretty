@@ -1,6 +1,8 @@
 # git-pretty
 An implementation of Justin Hileman's handy chart from http://justinhileman.info/article/git-pretty/
 
+… with some additions!
+
 ![Git Pretty Chart](http://justinhileman.info/article/git-pretty/git-pretty.png "Git Pretty Chart")
 
 ## Use
