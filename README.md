@@ -3,6 +3,8 @@ An implementation of Justin Hileman's handy chart from http://justinhileman.info
 
 … with some additions!
 
+![git-pretty GIF](git-pretty.gif)
+
 ![Git Pretty Chart](http://justinhileman.info/article/git-pretty/git-pretty.png "Git Pretty Chart")
 
 ## Use
