@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const inquirer = require('inquirer')
+const chalk = require('chalk')
 
 async function ask(question, choices) {
     const { answer } = await inquirer.prompt([{
@@ -18,15 +19,20 @@ function askYesNo(question) {
     return ask(question, ['Yes', 'No'])
 }
 
+function printCode(code) {
+    console.log(chalk.bgGreenBright(chalk.black(` ${code} `)))
+}
+
 function interactiveRebase() {
-    console.log('We\'re going to do an interactive rebase!')
-    console.log('Welcome to the DANGER ZONE!')
+    console.log(`We\'re going to do an ${chalk.bold('** interactive rebase! **')}`)
     console.log()
-    console.log('git rebase -i {COMMITISH}')
+    console.log(chalk.bgRed('Welcome to the DANGER ZONE!'))
+    console.log()
+    printCode('git rebase -i {COMMITISH}')
     console.log()
     console.log('And when that\'s done, do this:')
     console.log()
-    console.log('git push --force origin {branch}')
+    printCode('git push --force origin {branch}')
     console.log()
 }
 
@@ -51,7 +57,7 @@ async function main() {
         if (answer === '2') {
             console.log('Looks like this is what you are looking for:')
             console.log()
-            console.log('git reset --hard')
+            printCode('git reset --hard')
             console.log()
             return '12'
         }
@@ -63,7 +69,7 @@ async function main() {
         if (answer === '1') {
             console.log('Looks like this is what you are looking for:')
             console.log()
-            console.log('git revert {COMMITISH}')
+            printCode('git revert {COMMITISH}')
             console.log()
             return '21'
         }
@@ -85,8 +91,8 @@ async function main() {
                 if (answer === '1') {
                     console.log('Looks like this is what you are looking for:')
                     console.log()
-                    console.log('git add {my_awesome_file}')
-                    console.log('git commit --amend')
+                    printCode('git add {my_awesome_file}')
+                    printCode('git commit --amend')
                     console.log()
                     return '2211'
                 }
@@ -94,7 +100,7 @@ async function main() {
                 if (answer === '2') {
                     console.log('Looks like this is what you are looking for:')
                     console.log()
-                    console.log('git commit --amend')
+                    printCode('git commit --amend')
                     console.log()
                     return '2212'
                 }
@@ -102,7 +108,7 @@ async function main() {
                 if (answer === '3') {
                     console.log('Looks like this is what you are looking for:')
                     console.log()
-                    console.log('git reset HEAD~')
+                    printCode('git reset HEAD~')
                     console.log()
                     return '2213'
                 }
@@ -110,7 +116,7 @@ async function main() {
                 if (answer === '4') {
                     console.log('Looks like this is what you are looking for:')
                     console.log()
-                    console.log('git reset --hard HEAD^')
+                    printCode('git reset --hard HEAD^')
                     console.log()
                     return '2214'
                 }
@@ -122,7 +128,7 @@ async function main() {
                 if (answer === '1') {
                     console.log('We\'ll reset and commit from scratch:')
                     console.log()
-                    console.log('git reset {COMMITISH}')
+                    printCode('git reset {COMMITISH}')
                     console.log()
                     console.log('Then split off a logical chunk from your mess, stage it and commit it with a good message.')
                     console.log('Still have a mess? Do it again.')
@@ -184,7 +190,7 @@ async function main() {
             if (answer === '1') {
                 console.log('Looks like this is what you are looking for:')
                 console.log()
-                console.log('git rebase origin/{branch}')
+                printCode('git rebase origin/{branch}')
                 console.log()
                 return '321'
             }
@@ -199,7 +205,7 @@ async function main() {
     if (answer === '4') {
         console.log('To delete all local branches that are already merged into the currently checked out branch:')
         console.log()
-        console.log('git branch --merged | egrep -v \'(^\\*|master|dev)\' | xargs git branch -d')
+        printCode('git branch --merged | egrep -v \'(^\\*|master|dev)\' | xargs git branch -d')
         console.log()
         console.log('You can see that master and dev are excluded in case they are an ancestor.')
         console.log('Check out https://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged')
