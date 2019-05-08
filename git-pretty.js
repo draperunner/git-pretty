@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const inquirer = require('inquirer');
+const inquirer = require('inquirer')
 
 async function ask(question, choices) {
     const { answer } = await inquirer.prompt([{
@@ -199,7 +199,7 @@ async function main() {
     if (answer === '4') {
         console.log('To delete all local branches that are already merged into the currently checked out branch:')
         console.log()
-        console.log('git branch --merged | egrep -v \'(^\*|master|dev)\' | xargs git branch -d')
+        console.log('git branch --merged | egrep -v \'(^\\*|master|dev)\' | xargs git branch -d')
         console.log()
         console.log('You can see that master and dev are excluded in case they are an ancestor.')
         console.log('Check out https://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged')
