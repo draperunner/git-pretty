@@ -76,7 +76,8 @@ function main() {
                 console.log()
                 console.log("1: I forgot to add a file")
                 console.log("2: A better message")
-                console.log("3: Just throw the last commit away")
+                console.log("3: Remove the last commit, but keep the changes")
+                console.log("4: Throw the last commit away, and delete its changes")
                 response = prompt("> ")
                 console.log()
 
@@ -100,9 +101,17 @@ function main() {
                 if (response == "3") {
                     console.log("Looks like this is what you are looking for:")
                     console.log()
-                    console.log("git reset --hard HEAD^")
+                    console.log("git reset HEAD~")
                     console.log()
                     return "2213"
+                }
+
+                if (response == "4") {
+                    console.log("Looks like this is what you are looking for:")
+                    console.log()
+                    console.log("git reset --hard HEAD^")
+                    console.log()
+                    return "2214"
                 }
             }
 
