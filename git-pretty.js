@@ -24,7 +24,7 @@ function printCode(code) {
 }
 
 function interactiveRebase() {
-    console.log(`We\'re going to do an ${chalk.bold('** interactive rebase! **')}`)
+    console.log(`We're going to do an ${chalk.bold('** interactive rebase! **')}`)
     console.log()
     console.log(chalk.bgRed('Welcome to the DANGER ZONE!'))
     console.log()
