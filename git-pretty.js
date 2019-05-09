@@ -23,11 +23,13 @@ function printCode(code) {
     console.log(chalk.bgGreenBright(chalk.black(` ${code} `)))
 }
 
+function dangerZone() {
+    console.log('\n' + chalk.bgRed('Welcome to the DANGER ZONE!') + '\n')
+}
+
 function interactiveRebase() {
+    dangerZone()
     console.log(`We're going to do an ${chalk.bold('** interactive rebase! **')}`)
-    console.log()
-    console.log(chalk.bgRed('Welcome to the DANGER ZONE!'))
-    console.log()
     printCode('git rebase -i {COMMITISH}')
     console.log()
     console.log('And when that\'s done, do this:')
@@ -203,8 +205,8 @@ async function main() {
     }
 
     if (answer === '4') {
+        dangerZone()
         console.log('To delete all local branches that are already merged into the currently checked out branch:')
-        console.log()
         printCode('git branch --merged | egrep -v \'(^\\*|master|dev)\' | xargs git branch -d')
         console.log()
         console.log('You can see that master and dev are excluded in case they are an ancestor.')
