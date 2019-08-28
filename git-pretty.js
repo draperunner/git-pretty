@@ -44,6 +44,7 @@ async function main() {
         'I accidentally committed something',
         'My Git history is ugly',
         'I have a bunch of old branches I want gone',
+        'I want to sync my fork with the original repo',
     ])
 
     if (answer === '1') {
@@ -212,6 +213,60 @@ async function main() {
         console.log('You can see that master and dev are excluded in case they are an ancestor.')
         console.log('Check out https://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged')
         return '4'
+    }
+
+    if (answer === '5') {
+        console.log('Alright! You have forked a repo a while ago, and now it\'s time to update it with the changes in the original repo.')
+        console.log()
+
+        const answer = await ask('Have you already configured the original repo as a remote?', [
+            'No',
+            'Yes',
+            'Not sure'
+        ])
+
+        if (answer === '1') {
+            console.log('Let\'s set up a remote.')
+            printCode('git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git')
+            console.log()
+            console.log('Verify that it was added by listing all remotes:')
+            printCode('git remote -v')
+            console.log()
+            console.log('Fetch the changes from the remote:')
+            printCode('git fetch upstream')
+            console.log()
+            console.log('Now checkout your local master branch')
+            printCode('git checkout master')
+            console.log()
+            console.log('Merge the changes from the remote into your local branch')
+            printCode('git merge upstream/master')
+            console.log()
+            console.log('Read GitHub\'s guide for this if you don\'t trust git-pretty: https://help.github.com/en/articles/syncing-a-fork')
+            return '52'
+        }
+
+        if (answer === '2') {
+            console.log('Ok then. I\'ll assume the name of your remote for the original repo is "upstream"')
+            console.log()
+            console.log('Fetch the changes from the remote:')
+            printCode('git fetch upstream')
+            console.log()
+            console.log('Now checkout your local master branch')
+            printCode('git checkout master')
+            console.log()
+            console.log('Merge the changes from the remote into your local branch')
+            printCode('git merge upstream/master')
+            console.log()
+            console.log('Read GitHub\'s guide for this if you don\'t trust git-pretty: https://help.github.com/en/articles/syncing-a-fork')
+            return '51'
+        }
+
+        if (answer === '3') {
+            console.log('Not sure? Do this:')
+            printCode('git remote -v')
+            console.log('If the original repo is in that list, that means the remote is configured.')
+            return '53'
+        }
     }
 }
 

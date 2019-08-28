@@ -19,6 +19,8 @@ So you have a mess on your hands. What sort of mess?
 1: An uncommitted mess
 2: I accidentally committed something
 3: My Git history is ugly
+4: I have a bunch of old branches I want gone
+5: I want to sync my fork with the original repo
 >
 ```
 
