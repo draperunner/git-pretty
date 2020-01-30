@@ -45,6 +45,7 @@ async function main() {
         'My Git history is ugly',
         'I have a bunch of old branches I want gone',
         'I want to sync my fork with the original repo',
+        'I want my branch to be exactly like on GitHub!',
     ])
 
     if (answer === '1') {
@@ -267,6 +268,15 @@ async function main() {
             console.log('If the original repo is in that list, that means the remote is configured.')
             return '53'
         }
+    }
+
+    if (answer === '6') {
+        console.log('Here is what you need. if master is not your desired branch, replace it in the code below with the desired branch name.')
+        console.log('Make sure you don\t have any local changes you want to keep!')
+        dangerZone()
+        printCode('git fetch')
+        printCode('git reset --hard origin/master')
+        return '6'
     }
 }
 
