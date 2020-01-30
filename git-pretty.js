@@ -272,7 +272,7 @@ async function main() {
 
     if (answer === '6') {
         console.log('Here is what you need. if master is not your desired branch, replace it in the code below with the desired branch name.')
-        console.log('Make sure you don\t have any local changes you want to keep!')
+        console.log('Make sure you don\'t have any local changes you want to keep!')
         dangerZone()
         printCode('git fetch')
         printCode('git reset --hard origin/master')
