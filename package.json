@@ -9,6 +9,9 @@
     "lint": "eslint git-pretty.js"
   },
   "bin": "./git-pretty.js",
+  "files": [
+    "git-pretty.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/draperunner/git-pretty.git"
