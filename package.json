@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/draperunner/git-pretty#readme",
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "inquirer": "^7.1.0"
   },
   "devDependencies": {
