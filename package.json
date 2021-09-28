@@ -5,8 +5,9 @@
   "main": "git-pretty/git-pretty.js",
   "scripts": {
     "start": "node git-pretty.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint git-pretty.js"
+    "test": "prettier . --check",
+    "lint": "eslint git-pretty.js",
+    "format": "prettier . --write"
   },
   "bin": "./git-pretty.js",
   "files": [

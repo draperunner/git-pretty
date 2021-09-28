@@ -1,18 +1,23 @@
 # git-pretty
+
 An implementation of Justin Hileman's handy chart from http://justinhileman.info/article/git-pretty/
 
 … with some additions!
 
 ![git-pretty GIF](git-pretty.gif)
 
-![Git Pretty Chart](http://justinhileman.info/article/git-pretty/git-pretty.png "Git Pretty Chart")
+![Git Pretty Chart](http://justinhileman.info/article/git-pretty/git-pretty.png 'Git Pretty Chart')
 
 ## Use
+
 Just run
+
 ```bash
 npx git-pretty
 ```
+
 This opens an interactive session like this:
+
 ```bash
 So you have a mess on your hands. What sort of mess?
 
@@ -25,7 +30,9 @@ So you have a mess on your hands. What sort of mess?
 ```
 
 ## Install
+
 If you need this kind of help often, you could install git-pretty globally:
+
 ```
 npm i -g git-pretty
 ```
