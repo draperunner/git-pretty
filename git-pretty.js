@@ -226,7 +226,7 @@ async function main() {
             'To delete all local branches that are already merged into the currently checked out branch:',
         )
         printCode(
-            "git branch --merged | egrep -v '(^\\*|master|dev)' | xargs git branch -d",
+            "git branch --merged | egrep -v '(^\\*|master|main|dev)' | xargs git branch -d",
         )
         console.log()
         console.log(
