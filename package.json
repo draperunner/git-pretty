@@ -25,11 +25,11 @@
   "homepage": "https://github.com/draperunner/git-pretty#readme",
   "dependencies": {
     "chalk": "^4.1.1",
-    "inquirer": "^7.3.3"
+    "inquirer": "^8.1.5"
   },
   "devDependencies": {
     "eslint": "^7.26.0",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.3.0"
   }
 }
