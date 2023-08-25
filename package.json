@@ -28,8 +28,7 @@
     "inquirer": "^8.1.5"
   },
   "devDependencies": {
-    "eslint": "^7.26.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.3.0"
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.2"
   }
 }
