@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-const { select } = require('@inquirer/prompts')
-
-const chalk = require('chalk')
+import { select } from '@inquirer/prompts'
+import chalk from 'chalk'
 
 async function ask(question, choices) {
     return await select({

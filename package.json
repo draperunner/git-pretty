@@ -3,6 +3,7 @@
   "version": "3.0.3",
   "description": "An implementation of Justin Hileman's chart from \"Changing History, or How to Git Pretty\"",
   "main": "git-pretty/git-pretty.js",
+  "type": "module",
   "scripts": {
     "start": "node git-pretty.js",
     "test": "prettier . --check",
