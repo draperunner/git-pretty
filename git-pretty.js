@@ -1,20 +1,16 @@
 #!/usr/bin/env node
-const inquirer = require('inquirer')
+const { select } = require('@inquirer/prompts')
+
 const chalk = require('chalk')
 
 async function ask(question, choices) {
-    const { answer } = await inquirer.prompt([
-        {
-            type: 'list',
-            name: 'answer',
-            message: question,
-            choices: choices.map((name, index) => ({
-                name,
-                value: `${index + 1}`,
-            })),
-        },
-    ])
-    return answer
+    return await select({
+        message: question,
+        choices: choices.map((name, index) => ({
+            name,
+            value: `${index + 1}`,
+        })),
+    })
 }
 
 function askYesNo(question) {
