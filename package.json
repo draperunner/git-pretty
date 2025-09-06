@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/draperunner/git-pretty.git"
   },
-  "author": "Mats Byrkjeland <matsbyr@gmail.com>",
+  "author": "draperunner",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/draperunner/git-pretty/issues"
