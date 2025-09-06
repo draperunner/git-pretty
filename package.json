@@ -10,7 +10,9 @@
     "lint": "eslint git-pretty.js",
     "format": "prettier . --write"
   },
-  "bin": "./git-pretty.js",
+  "bin": {
+    "git-pretty": "git-pretty.js"
+  },
   "files": [
     "git-pretty.js"
   ],
